@@ -7,13 +7,15 @@ export const FETCH_NEWS = 'FETCH_NEWS';
 
 // action creator responsible to fetch weather api
 export function fetchNews(newsCategory){
-	const url = `${API_URL}&category=${newsCategory}`;
-	const request = axios.get(url);
-
-	console.log('Request: ', request);
-	return { // action creator always have to return action, which is an object, and which will ALWAYS have a `type`
-		type: FETCH_NEWS,
-		payload: request
+	return (dispatch) => {
+		const url = `${API_URL}&category=${newsCategory}`;
+		axios.get(url).then((resp) => {
+			console.log('resp AC: ', resp)
+			dispatch({ // action creator always have to return action, which is an object, and which will ALWAYS have a `type`
+				type: FETCH_NEWS,
+				payload: resp.data
+			})
+		})
 	}
 }
 

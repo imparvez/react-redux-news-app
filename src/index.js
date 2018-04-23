@@ -3,17 +3,16 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import ReduxPromise from 'redux-promise';
+import thunk from 'redux-thunk';
 
 import App from './components/app';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+// const createStoreWithMiddleware = 
 const store = createStore(
-	reducers, 
-	compose(
-		typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
-	)
-);
+  reducers,
+  applyMiddleware(thunk, ReduxPromise)
+)
 
 ReactDOM.render(
   <Provider store={store}>
