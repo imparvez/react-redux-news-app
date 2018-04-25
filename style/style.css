@@ -1,0 +1,67 @@
+html {
+	background: #E3E3D8;
+	font-family: sans-serif;
+	padding: 25px;
+}
+
+*, *:hover, *:focus {
+	outline: none;
+}
+
+.container {
+	text-align: center;
+}
+
+.input-group { padding: 20px; }
+
+input.form-control {
+	max-width: 650px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    font-size: 22px;
+    line-height: 27px;
+    box-sizing: border-box;
+}
+
+button.btn {
+	padding: 10px 25px;
+	margin-left: 15px;
+	font-size: 0.75em;
+	border: none;
+	text-transform: uppercase;
+	border-radius: 4px;
+}
+
+.news-list-item {
+	width: 300px;
+	background: white;
+	margin: auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0;
+	transform: scale(0.95);
+	transition: box-shadow 0.5s, transform 0.5s;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.news-list-item:hover {
+	transform: scale(1);
+	box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.poster-container img { width: 100%; }
+
+.news-title {
+	position: relative;
+	float: left;
+	padding: 20px;
+	width: 100%;
+	font-size: 1em;
+	color: #333;
+	box-sizing: border-box;
+}

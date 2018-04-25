@@ -13,9 +13,12 @@ class NewsDetail extends Component{
 			const newsImageURL = item.urlToImage;
 
 			return(
-				<div className="news-list-item">
-					<h2>{newsTitle}</h2>
-				</div>
+				<a href={newsLink} className="news-list-item">
+					<div className="poster-container">
+						<img src={(newsImageURL)? newsImageURL: `http://via.placeholder.com/300x166` } alt={newsTitle} />
+					</div>
+					<h2 className="news-title">{newsTitle}</h2>
+				</a>
 			)
 		})
 
