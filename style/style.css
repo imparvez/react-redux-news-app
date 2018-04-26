@@ -35,6 +35,15 @@ button.btn {
 	border-radius: 4px;
 }
 
+.news-list {
+	-webkit-column-count: 3;
+    -webkit-column-gap: 20px;
+    -webkit-column-fill: balance;
+    transition: all 0.2s ease;
+    -webkit-column-count: 5;
+}
+
+
 .news-list-item {
 	width: 300px;
 	background: white;
